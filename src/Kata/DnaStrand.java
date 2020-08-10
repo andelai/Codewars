@@ -3,28 +3,28 @@ package Kata;
 
 public class DnaStrand {
 	public static void main (String[] args)  {
-//		System.out.println(DnaStrand.makeComplement("AAAA"));
+		System.out.println(DnaStrand.makeComplement("AAAA"));
+		System.out.println(DnaStrand.makeComplement("GTAT"));
 	}
 	
 	
 	  public static String makeComplement(String dna) {
-		  char dnaChar[] = dna.toCharArray();
-		  System.out.println(dnaChar);
-	    for ( int i=0; i<dnaChar.length; i++) {
-	      if (dna.charAt(i) == 'A') {
-	    	  dna = dna.replace(dna.charAt(i), 'T');
-	      } 
-	      else if (dna.charAt(i) == 'T') {
-	    	  dna = dna.replace(dna.charAt(i), 'A');
-	      } 
-	      else if (dna.charAt(i) == 'C') {
-	    	  dna = dna.replace(dna.charAt(i), 'G');
-	      } 
-	      else if (dna.charAt(i) == 'G') {
-	    	  dna = dna.replace(dna.charAt(i), 'C');
+		  StringBuilder s = new StringBuilder(dna);
+		  for (int i = 0; i< s.length(); i++)  {
+			  switch(s.charAt(i)) {
+			  case 'A':
+				  s.setCharAt(i, 'T'); break;
+			  case 'T':
+				  s.setCharAt(i, 'A'); break;
+			  case 'C':
+				  s.setCharAt(i, 'G'); break;
+			  case 'G':
+				  s.setCharAt(i, 'C'); break;
+				  
+			  }
+			 
+		  }
+		  return s.toString();
+	
 	      }
-	    }
-	    System.out.println("dna = "+dna);
-	    return dna;
-	  }
-	}
+ }
