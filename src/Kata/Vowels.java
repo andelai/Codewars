@@ -1,18 +1,17 @@
 package Kata;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
 
 public class Vowels {
-	List<Character> samoglasnici = new ArrayList<Character>();
+	static char[] samogl = new char[] {'a','e','i','o','u' };
 	  public static int getCount(String str) {
 		    int vowelsCount = 0;
 		    char[] vow = str.toCharArray();
-		    for (char v : vow)  {
-		    }
+		    for (int i = 0 ; i< vow.length; i++)  {
+		    	if (new String(samogl).indexOf(vow[i]) != -1) {
+		    		vowelsCount++;
+		    	}
+			}
 		    // your code here
 		    return vowelsCount;
-		  }
+	  }
 }
