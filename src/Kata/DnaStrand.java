@@ -7,7 +7,6 @@ public class DnaStrand {
 		System.out.println(DnaStrand.makeComplement("GTAT"));
 	}
 	
-	
 	  public static String makeComplement(String dna) {
 		  StringBuilder s = new StringBuilder(dna);
 		  for (int i = 0; i< s.length(); i++)  {
@@ -19,12 +18,9 @@ public class DnaStrand {
 			  case 'C':
 				  s.setCharAt(i, 'G'); break;
 			  case 'G':
-				  s.setCharAt(i, 'C'); break;
-				  
+				  s.setCharAt(i, 'C'); break;  
 			  }
-			 
 		  }
 		  return s.toString();
-	
-	      }
+      }
  }
