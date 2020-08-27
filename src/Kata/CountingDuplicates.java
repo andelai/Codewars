@@ -27,6 +27,11 @@ public class CountingDuplicates {
 		  }
 	  public static void main(String[]a) {
 		  assertEquals(1, CountingDuplicates.duplicateCount("abcdea"));
+		  
+//		  String someString = "hey these are only words";
+		  String someString = "heytheseareonly2words";
+		  boolean allLetters = someString.chars().allMatch(Character::isLetter);
+		  System.out.println("allLetters == "+allLetters);
 	  }
 	 
 }
